@@ -1,0 +1,40 @@
+
+<div class="test" style="text-align: center;">
+    <h1>User Registration restaurant </h1>
+    
+</div>
+<!-- <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>success!</strong> Your data has been added successfully
+  <button  (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+<br>
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Enter Email</label>
+      <input formControlName="email" type="email" class="form-control" placeholder="Enter email">
+      
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Enter username</label>
+        <input  formControlName="username" type="email" class="form-control" placeholder="Enter username">
+        
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Enter password</label>
+        <input  formControlName="password" type="email" class="form-control" placeholder="Enter password">
+        
+      </div>  
+      <br>
+
+      <div class="test" style="text-align: center;">
+        <a routerLink="/login">Already User register ? click to Login</a>
+    
+      </div>
+       
+    <button type="submit" class="btn btn-primary">register</button>
+  
+  </form>

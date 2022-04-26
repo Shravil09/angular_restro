@@ -1,0 +1,34 @@
+
+<div class="test" style="text-align: center;">
+    <h1>Add-New restaurant List</h1>
+    
+</div>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>success!</strong> Your data has been added successfully
+  <button  (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<br>
+<form [formGroup]="addRestro" (ngSubmit)="collectRestro()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Enter Name</label>
+      <input type="email" class="form-control" formControlName="name" placeholder="Enter name">
+      
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Enter Onwer Name</label>
+        <input type="email" class="form-control" formControlName="owner" placeholder="Enter owner">
+        
+    </div>
+      <br>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Enter Address</label>
+        <input type="email" class="form-control" formControlName="address" placeholder="Enter address">
+       
+    </div>
+      <br>
+       
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
